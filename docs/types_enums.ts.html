@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> types/enums.ts</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">@matterport/r3f Starter app</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Interfaces</h3><ul><li><a href="WebComponentConfig.html">WebComponentConfig</a></li></ul><h3>Components</h3><ul><li><a href="Box.html">Box</a></li><li><a href="Home.html">Home</a></li><li><a href="MpViewer.html">MpViewer</a></li></ul></div><div class="category"><h2>Enum</h2><h3>Global</h3><ul><li><a href="global.html#Brand">Brand</a></li><li><a href="global.html#Dollhouse">Dollhouse</a></li><li><a href="global.html#FloorPlanView">FloorPlanView</a></li><li><a href="global.html#GuidedTour">GuidedTour</a></li><li><a href="global.html#GuidedTourCallToAction">GuidedTourCallToAction</a></li><li><a href="global.html#GuidedTourPan">GuidedTourPan</a></li><li><a href="global.html#Help">Help</a></li><li><a href="global.html#HighlightReel">HighlightReel</a></li><li><a href="global.html#HighlightReelBehavior">HighlightReelBehavior</a></li><li><a href="global.html#Language">Language</a></li><li><a href="global.html#LoopBack">LoopBack</a></li><li><a href="global.html#Mattertags">Mattertags</a></li><li><a href="global.html#MlsBehavior">MlsBehavior</a></li><li><a href="global.html#OpenBehavior">OpenBehavior</a></li><li><a href="global.html#Pin">Pin</a></li><li><a href="global.html#Play">Play</a></li><li><a href="global.html#Portal">Portal</a></li><li><a href="global.html#Quickstart">Quickstart</a></li><li><a href="global.html#Search">Search</a></li><li><a href="global.html#SwitchFloors">SwitchFloors</a></li><li><a href="global.html#TagNavigation">TagNavigation</a></li><li><a href="global.html#Title">Title</a></li><li><a href="global.html#Tour">Tour</a></li><li><a href="global.html#VirtualReality">VirtualReality</a></li><li><a href="global.html#Wheel">Wheel</a></li><li><a href="global.html#Zoom">Zoom</a></li></ul></div><div class="category"><h2>Function</h2><h3>Global</h3><ul><li><a href="global.html#setAttributes">setAttributes</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>types/enums.ts</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// WebComponentConfig Parameters - https://support.matterport.com/s/article/URL-Parameters
+
+// Launching 3D Showcase
+/**
+ * Launching 3D Showcase: Help (help) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Help {
+  /** (Default) Do not show help at all. */
+  Hide = 'hide', // 0,
+
+  /** Always show help when the Matterport model opens. More concise help text. */
+  ShowWithDetail = 'show with detail', // 1
+
+  /** Always show help when the Matterport model opens. */
+  Show = 'show', // 2,
+}
+
+/**
+ * Launching 3D Showcase: OpenBehavior (nt). Only for mobile *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum OpenBehavior {
+  /** (Default) If a Matterport model is embedded on a webpage, then when user presses the play button 3D Showcase opens in the same browser tab. */
+  SameBrowserTab = 'opens in the same browser tab', // 0
+
+  /** If a Matterport model is embedded on a webpage, then when user presses the play button, 3D Showcase opens in a new browser tab. */
+  NewBrowserTab = 'opens in a new browser tab', // 1
+}
+
+/**
+ * Launching 3D Showcase: Play (play). Only for SDK (IFrame) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Play {
+  /** (Default) Shows a Play button ▶️️ on the iframe. The user must press the Play button ▶️️ to open the Matterport model. */
+  Manual = 'manual', // 0
+
+  /**
+   * Automatically opens the Matterport model when the iframe loads on the page. If the 3D Showcase is opened via a link (not embedded in an iframe), this option is chosen automatically. When embedding Showcase within an iframe, play=1 will only work if the iframe is large enough on the user’s screen to provide a good user experience. Specifically, on mobile devices, the iframe has to cover at
+   * least 60% of the screen.
+   */
+  Auto = 'auto', // 1
+}
+
+/**
+ * Launching 3D Showcase: Quickstart (qs) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Quickstart {
+  /** (Default) Disable Quickstart (when the Matterport model first opens, zoom in from Dollhouse View). */
+  Disable = 'disable', // 0
+
+  /** Enable Quickstart (when the Matterport model first opens, go straight into Inside View). */
+  Enable = 'enable', // 1
+}
+
+// Visibility
+/**
+ * Visibility: Brand (brand) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Brand {
+  /** Hide 'Presented By' details when model opens. Hide contact details in the "About" panel (top-left grey corner of 3D Showcase). */
+  Hide = 'hide', // 0
+
+  /** (Default) Display all branding information in the "About" panel (top-left corner of 3D Showcase). */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: Dollhouse (dh) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Dollhouse {
+  /** Hide Dollhouse View in introductory fly-in. Hide Dollhouse Button in the bottom left corner of the 3D Showcase UI. Hides Dollhouse and Floorplan view snapshots in the highlight reel. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show Dollhouse View. */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: Tour (tour) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Tour {
+  /** No tour controls or highlight reel appear. */
+  Hide = 'hide', // 0
+
+  /** (Default) The tour mode saved in the model is used. */
+  Model = 'model', // 1
+
+  /** Story mode tour is used. */
+  Story = 'story', // 2
+
+  /** Highlight reel mode tour is used. */
+  HighlightReel = 'highlight reel', // 3
+}
+
+/**
+ * Visibility: GuidedTour (gt) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum GuidedTour {
+  /** Hide Guided Tour buttons in the bottom left corner of the 3D Showcase UI. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show Guided Tour buttons. */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: HighlightReel (hr) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum HighlightReel {
+  /** Hide highlight reel at the bottom of the 3D Showcase UI. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show highlight reel. */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: MlsBehavior (mls) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum MlsBehavior {
+  /** (Default) Show branding information, links in Mattertag™ Posts, and VR. */
+  Branding = 'branding', // 0
+
+  /** Show the MLS-friendly version of the Matterport model. This removes branding, removes links in Mattertag™ Posts, and removes VR. */
+  MlsFriendly = 'MLS friendly', // 1
+
+  /** Same behavior as MlsFriendly, but also removes the "About" panel in the top-left corner after loading. */
+  MlsFriendlyNoAbout = 'MLS friendly, no about', // 2
+}
+
+/**
+ * Visibility: Mattertags (mt) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Mattertags {
+  /** Hide Mattertags and "Mattertag Content" toggle in the "About" panel. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show Mattertag Posts, */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: TagNavigation (tagNav) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum TagNavigation {
+  /** Hides the &lt;and> buttons from Tags and disables navigating through Tags using the "," and "." keys. */
+  Hide = 'hide', // 0
+
+  /** (Default) Shows the &lt;and> buttons for Tags and enables navigating through Tags using the "," and "." keys. */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: Pin (pin) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Pin {
+  /** Hide placed 360º Views pins in Dollhouse and Floor Plan. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show placed 360º Views pins in Dollhouse and Floor Plan. */
+  Show = 'show', // 1
+}
+
+/**
+ * Visibility: Portal (portal) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Portal {
+  /** Hide placed 360º Views connection portals while in Inside View. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show placed 360º Views connection portals while in Inside View. */
+  Show = 'show', // 1
+}
+
+// User Interface
+/**
+ * User Interface: SwitchFloors (f) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum SwitchFloors {
+  /** Remove the option to switch floors. This treats the Matterport model as "all one floor". */
+  Disable = 'disable', // 0
+
+  /** (Default) Let the user navigate the 3D model floor by floor. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * User Interface: FloorPlanView (fp) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum FloorPlanView {
+  /** Remove the floor plan view button from the bottom-left corner of the 3D Showcase UI. */
+  Disable = 'disable', // 0
+
+  /** (Default) Show the floor plan view button in the bottom-left corner of the 3D Showcase UI. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * User Interface: Language (lang) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Language {
+  /** (Default) Shows the 3D Showcase user interface (help, tooltips, terms of service, etc) in the language set by the viewer's browser. If the language in the viewer's browser is not supported by 3D Showcase, it will default to American English. */
+  Default = '', // ''
+
+  /** Shows the 3D Showcase UI in American English. */
+  English = 'en', //
+
+  /** Shows the 3D Showcase UI in American Spanish. */
+  Spanish = 'es', //
+
+  /** Shows the 3D Showcase UI in American French. */
+  French = 'fr', //
+
+  /** Shows the 3D Showcase UI in American German. */
+  German = 'de', //
+
+  /** Shows the 3D Showcase UI in American Russian. */
+  Russian = 'ru', //
+
+  /** Shows the 3D Showcase UI in American Chinese. */
+  Chinese = 'zh', //
+
+  /** Shows the 3D Showcase UI in American Japanese. */
+  Japanese = 'ja', //
+
+  /** Shows the 3D Showcase UI in American Korean. */
+  Korean = 'ko', //
+
+  /** Shows the 3D Showcase UI in American Dutch. */
+  Dutch = 'nl', //
+
+  /** Shows the 3D Showcase UI in American Portuguese. */
+  Portuguese = 'pt', //
+}
+
+/**
+ * User Interface: Zoom (nozoom) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Zoom {
+  /** Disable zooming in 3D Showcase */
+  Disable = 'disable', // 1
+
+  /** (Default) Enable zooming in 3D Showcase. */
+  Enable = 'enable', // 0
+}
+
+/**
+ * User Interface: Search (search) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Search {
+  /** Remove the magnifying glass (search) icon from the upper-left corner of the 3D Showcase UI. */
+  Disable = 'disable', // 0
+
+  /** (Default) Show the magnifying glass (search) icon in the upper-left corner of the 3D Showcase UI. If Space Search is disabled at the account level, this parameter has no effect. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * User Interface: Wheel (wh) - SDK (IFrame) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Wheel {
+  /** Ignore scroll wheel input from the mouse. Scroll wheel input will cause the entire webpage to move up and down. This parameter is only valid when the model is embedded with an iframe. */
+  Disable = 'disable', // 0
+
+  /** (Default) Enables scroll wheel input from the mouse, so the 3D model can zoom in. 3D Showcase will only listen to scroll wheel input if the cursor is over the iframe. */
+  Enable = 'enable', // 1
+}
+
+// Guided Tours
+/**
+ * Guided Tours: Guided Tours (kb) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum GuidedTourPan {
+  /** Do not pan when you reach a new highlight in a Guided Tour. */
+  Disable = 'disable', // 0
+
+  /** (Default) Gently pan once you reach a new highlight in a Guided Tour. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * Guided Tours: LoopBack (lp) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum LoopBack {
+  /** (Default) Stop once you reach the end of the Guided Tour. */
+  Disable = 'disable', // 0
+
+  /** Loop back to the beginning once you reach the end. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * Guided Tours: Title (title) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum Title {
+  /** Space title is not displayed. Top-left about panel not displayed. */
+  Disable = 'disable', // 0
+
+  /** (Default) Space title is displayed. Top-left about panel is displayed. */
+  Enable = 'enable', // 1
+}
+
+/**
+ * Guided Tours: GuidedTourCallToAction (tourcta) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum GuidedTourCallToAction {
+  /** No call to action at the end of a a Guided Tour. */
+  Disable = 'disable', // 0
+
+  /** (Default) Large call to action at the end of a Guided Tour. */
+  Large = 'large', // 1
+
+  /** Small call to action at the end of a Guided Tour. */
+  Small = 'small', // 2
+}
+
+/**
+ * Guided Tours: HighlightReelBehavior (hl) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum HighlightReelBehavior {
+  /** (Default if highlight reel does not have a 360 View) Briefly show the highlight reel upon launch before hiding. */
+  Briefly = 'briefly', // 0
+
+  /** (Default if highlight reel does have a 360 View) Keep the highlight reel visible upon launch. */
+  Expended = 'expended', // 1
+
+  /** Keeps the highlight reel collapsed. This option is only available if there is no 360 View in the highlight reel. If there is a 360 View then 'Expended' behavior will be used. */
+  Collapsed = 'collapsed', // 2
+}
+
+// Virtual Reality
+/**
+ * Virtual Reality: VirtualReality (vr) *
+ *
+ * @category Enum
+ * @enum
+ */
+export enum VirtualReality {
+  /** Hide the VR button. */
+  Hide = 'hide', // 0
+
+  /** (Default) Show the VR button. */
+  Show = 'show', // 1
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>
